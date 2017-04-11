@@ -1,0 +1,97 @@
+\newpage\subsection*{\Course \ Worksheet 11 Answers}
+\begin{enumerate}
+    
+    \item Using Newton's Method:
+    \begin{align*} 
+    	x_{n+1} &= x_n - \frac{f(x_n)}{f'(x_n)}, \quad n= 0, 1, 2, \ldots \\
+        &= x_n - \frac{-3x^3+5x^2-1}{-9x^2+10x}
+    \end{align*}
+    Starting with $x_0 = 1$, we obtain: 
+    \begin{align*} 
+    	x_{1} 
+        &= x_0 - \frac{-3x_0^3+5x_0^2-1}{-9x_0^2+10x_0} \\
+        &= 1 - \frac{-3+5-1}{-9+10} \\
+        &= 1 - 1 \\
+        &= 0\\
+        x_2
+        &= x_1 - \frac{-3x_1^3+5x_1^2-1}{-9x_1^2+10x_1} \\
+        &= 0 - \frac{0 + 0 -1}{0 + 0}
+    \end{align*}    
+    It is not possible to calculate $x_2$ using Newton's Method when starting at $x_0=1$, because $x_2$ is undefined.  
+    
+    \item 
+    \begin{align*} 
+    	y'(t) &= \frac{3}{t+1} + \tan t \sec^2 t, \quad y(0) = 1 \\
+        \Rightarrow y(t) &= 3 \ln(t+1) + \tan^2 t + c \\
+        y(0) = 1 &= \ln(0+1) + \tan^2(0) + c = 0 + 0 + c \Rightarrow c = 1 \\
+        y(t) &= \ln(t+1) + \tan^2 t + 1
+    \end{align*}
+    
+    \item By inspection: 
+    \begin{align*}
+    	\int \left( e^{3x} + \sin(2 \pi x) \right) \,dx
+        &= \frac 1 3 e^{3x} - \frac{1}{2\pi} \cos(2\pi x) + C \\
+    \end{align*}
+    Check work: 
+    \begin{align*}
+    	\ddx \left( \frac 1 3 e^{3x} - \frac{1}{2\pi} \cos(2\pi x) + C \right) 
+        &= e^{3x} + \sin(2 \pi x)
+    \end{align*}    
+   
+   \item We need to find a $\delta$ such that
+   
+   $$|(4x - 5) - 7 | < \epsilon \quad \text{whenver} \quad 0 < |x - 3 | < \delta$$
+   
+   But: 
+   \begin{align*}
+   	|(4x - 5) - 7 | = | 4x - 12 | = 4 | x - 3 |
+   \end{align*}
+   So if we need $|(4x - 5) - 7 | < \epsilon$, then
+   \begin{align*}
+   	|(4x - 5) - 7 | = 4 | x - 3 | &< \epsilon \\
+    | x - 3 | &= \frac 1 4 \epsilon
+   \end{align*}
+   Choosing $\delta = \epsilon / 4$, then, as required:
+      \begin{align*}
+   	|(4x - 5) - 7 | = 4 | x - 3 | &< 4\delta = \epsilon 
+   \end{align*}
+   
+   A sketch is not required, but help explain things.
+   
+\end{enumerate}
+
+    \begin{center}
+        
+        \vspace{12pt} 
+        
+        \begin{tikzpicture}[scale=1] 
+            \begin{axis}[
+            width=6in,
+            height=5in,
+            %clip=false,
+            axis lines=middle,
+            xmin=-.1,xmax=3.5,
+            ymin=-1, ymax=10.8,
+            xtick={1,2,2.75,3,3.25},
+            xticklabels={1,2,$3-\delta$,3,$3+\delta$},
+            ytick={6,7,8},
+            yticklabels={$7-\epsilon$,7,$7+\epsilon$},        
+            axis line style={shorten >=-7.5pt, shorten <=-7.5pt},
+            xlabel=$x$,
+            ylabel=$y(x)$,
+            xlabel style={at={(ticklabel* cs:1)},anchor=north west},
+            ylabel style={at={(ticklabel* cs:1)},anchor= east},
+            grid style={line width=.2pt, draw=gray!30},
+            grid=both,
+            ]
+            \addplot[black,samples=501,domain=1:4,very thick] {4*x - 5};% 
+            \addplot[blue,samples=501,domain=0:2.75,thick] {6}; % horiz line
+            \addplot[blue,samples=501,domain=0:3.25,thick] {8}; % horiz line
+            \addplot +[mark=none,red,thick] coordinates {(3.25, 0) (3.25, 8)}; % vert line
+            \addplot +[mark=none,red,thick] coordinates {(2.75, 0) (2.75, 6)}; % vert line
+            \end{axis}
+        \end{tikzpicture}
+        
+        \vspace{12pt}
+        If $x \in [3-\delta, 3+\delta]$, then $|y-7| < \epsilon$.
+    \end{center}

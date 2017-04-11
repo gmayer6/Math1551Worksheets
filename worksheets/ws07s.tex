@@ -1,0 +1,110 @@
+\newpage\subsection*{1551 Worksheet 7 Answers}
+
+\SolutionsStatement
+
+\begin{enumerate}
+    
+    \item \begin{enumerate}
+    
+    \item \begin{align*}
+    	v'(t) &= \ddt 2^{3t} 
+        = 2^{3t} \ln 2 \ddt (3t)  
+        = 3\cdot 2^{3t} \ln 2
+    \end{align*}
+    Alternate solution: 
+    \begin{align*}
+    	v'(t) &= \ddt 2^{3t}
+        = \ddt 8^t 
+        = 8^t \ln 8
+    \end{align*}
+    
+    	\item 
+    	\begin{align*} 
+    		y(x) &= x^{x^{x}} \\
+    		\ln y&= \ln x^{x^{x}} =x^x \ln x \\
+     		\frac{y'}{y} &= \ddx (x^x \ln x) \\
+     		&= ( \ddx x^x ) \ln x + x^x \ddx \ln x \\
+     		&= ( \ddx x^x ) \ln x + x^x \frac 1 x 
+    	\end{align*}
+    	Calculate the derivative of $x^x$: 
+        \begin{align*}
+        	\text{let } u = x^x, \text{then } \ln u &= x \ln x \\
+            \frac{u'}{u} &= \ddx ( x \ln x) = \ln x + 1 \\
+            u' &= u(\ln x + 1) 
+            = x^x (\ln x + 1) 
+        \end{align*}
+        Thus $y'= x^x (\ln x + 1) \ln x + x^{x-1}$. 
+
+        
+        
+        \item \begin{align*} 
+        	u(x) &= \sin\left(\tan^{-1} (\ln x)\right) \\
+            \ddx u 
+            &= \cos\left(\tan^{-1} (\ln x)\right) \cdot 
+            \ddx \left(\tan^{-1} (\ln x)\right) \\
+            &= \cos\left(\tan^{-1} (\ln x)\right) \cdot 
+            \frac{1}{1+ (\ln x)^2} \cdot \ddx \ln x \\    
+            &= \cos\left(\tan^{-1} (\ln x)\right) \cdot 
+            \frac{1}{1+ (\ln x)^2} \cdot \frac 1 x            
+        \end{align*}
+        
+        
+        
+        
+        \item \begin{align*} 
+        	s(t) &= \log_2\left(\log_3\left(e^{t^2}\right)\right) \\
+            s' 
+            &= \frac{1}{\log_3\left(e^{t^2}\right) \ln 2} \cdot \ddt  \left( \log_3 e^{t^2} \right) \\
+            &= \frac{1}{\log_3\left(e^{t^2}\right) \ln 2} \cdot  \frac{1}{ \log_3 e^{t^2}} \cdot \ddt e^{t^2} \\
+            &= \frac{1}{\log_3\left(e^{t^2}\right) \ln 2} \cdot  \frac{1}{ \log_3 e^{t^2}} \cdot e^{t^2} \cdot 2t           
+        \end{align*}
+        
+        
+        \item \begin{align*}
+        a(t) 
+        &= \ln\left(\frac{(t+2)^3(t+5)^7}{\sqrt{t-5}}\right) \\
+        &= 3 \ln\left(t+2 \right) + 7 \ln\left(t+5\right) - \frac 1 2 \ln \left( t-5\right) \\
+        a'(t) &= \frac{3}{t+2} +\frac{7}{t+5} - \frac{1}{2(t-5)} 
+        \end{align*}
+    \end{enumerate}
+    
+    
+    
+    
+    
+    
+    
+    \item \begin{enumerate}
+    	\item Negative. Because if the tangent line is $y=mx +b$, value of $y$ decreases as $x$ increases.
+        \item Use implicit differentiation. Assume $y=y(x)$. 
+        \begin{align*}
+        	\ddx 2\left(x^2+y^2\right)^2&= \ddx 25\left(x^2-y^2\right) \\
+        	4(x^2+y^2) \cdot (2x+ 2y y') &= 25(2x-2yy') 
+        \end{align*}
+        Now substitute $(3,1)$ and solve for $y'$. 
+        \begin{align*}        
+        	4(3^2+1^2) \cdot (2\cdot3+ 2 y') &= 25(2\cdot3-2\cdot1\cdot y')\\
+        	40 (6+ 2 y') &= 25(6 - 2y')\\
+             (6+ 2 y') &= \frac 5 8 (6 - 2y')\\
+            \frac 13 4 y' &= - \frac 9 4 \\
+            y' &= - 9 13
+        \end{align*}
+        Thus the equation of the tangent line is 
+        \begin{align*}
+        	y - 1 &= - \frac{9 }{13} (x - 3) \\
+            y &= 1 - \frac{9}{ 13} (x - 3)
+        \end{align*}
+        The slope of the line is negative, as expected. The equation of the normal line is
+        \begin{align*}
+            y &= 1 + \frac{13}{ 9} (x - 3)
+        \end{align*}       
+    \end{enumerate}
+
+    
+\end{enumerate}    
+
+
+
+
+
+

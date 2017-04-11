@@ -1,0 +1,78 @@
+\newpage\section*{Worksheet 10, \Course, \Semester} 
+\noindent \Sections 4.4, 4.6: Curve Sketching and Optimization. 
+
+Note: section 4.5 is not covered in this course. It is covered in Math 1552.
+
+\subsection*{A Few Definitions and Theorems from Sections 4.1, 4.2, 4.3, 4.4}
+
+	\begin{itemize}
+    	\item \Emph{Local Extrema:} A function has a \Emph{local maximum} at $x = c$ if $f(x) \le f(c)$ for all $x$ in an open interval containing $c$. A function has a \Emph{local minimum} at $x = c$ if $f(x) \ge f(c)$ for all $x$ in an open interval containing $c$. 
+        \item \Emph{Critical Points:} An interior point of the domain of $f(x)$ where $f'=0$, or where $f'$ is undefined, is a \Emph{critical point}. 
+        \item \Emph{MVT:} If $f(x)$ is a continuous function defined on $[a,b]$, and is differentiable over $(a,b)$. Then there is at at least one point, $c \in (a,b)$, where 
+        $$\frac{f(b)-f(a)}{b-a} = f'(c)$$ 
+        \item \Emph{Increasing and Decreasing:} If $f'(x) > 0$ on $(a,b)$, then $f$ is \Emph{increasing} on $[a,b]$. If $f'(x) < 0$ on $(a,b)$, then $f$ is \Emph{decreasing} on $[a,b]$.
+        \item \Emph{First Derivative Test:} Suppose $f$ has a critical point at $x=c$.
+        \begin{itemize}
+            \item If $f'(x)$ changes from positive to negative at $c$, then $f$ has a \Emph{local maximum} at $c$.
+            \item If $f'(x)$ changes from negative to positive at $c$, then $f$ has a \Emph{local minimum} at $c$.
+            \item If $f'(x)$ doesn't change sign from positive to negative at $c$, then $f$ has no local minimum or maximum at $c$.
+        \end{itemize}
+        \item The graph of a differentiable function $f(x)$ is 
+        \begin{itemize}
+            \item \Emph{concave up} on an open interval if $f''(x)>0$
+            \item \Emph{concave down} on an open interval if $f''(x)<0$
+        \end{itemize}
+		\item An \Emph{inflection point} is a point where the graph of $f$ changes concavity.
+        \item \Emph{Second Derivative Test:} Suppose $f$ has a critical point at $x=c$.
+        \begin{itemize}
+            \item If $f''(c) > 0$, then $f$ has a local minimum at $c$.
+            \item If $f''(c) < 0$, then $f$ has a local maximum at $c$.
+            \item If $f''(c) = 0$, then the second derivative test is inconclusive.
+        \end{itemize}
+    \end{itemize}
+
+\subsection*{Recommended Steps to Solving Optimization Problems (4.6)}
+
+    \begin{enumerate}
+        \item Draw a picture, if possible.
+        \item Determine all the variables and equations.
+        \item Write the function you wish to optimize in terms of just one variable.
+        \item Take the derivative.
+        \item Find all critical numbers.
+        \item Use the first derivative test to find all local extrema.
+        \item Answer the original question, with units. 
+    \end{enumerate}
+
+
+    
+\subsection*{Exercises}
+
+\begin{enumerate}
+	\item If possible, sketch a curve or give a formula for a function that has the following properties. If it is not possible to do so, state why. Assume in each case that $f(x)$ is continuous, differentiable, and defined for all values of $x$. 
+    
+    \begin{enumerate}
+        \item $f(x)$ has an inflection point at $x=0$, and a critical point at $x=0$. 
+        \item $g(x)$ is concave up on $[0,4]$ and has a local maximum at $x=2$. 
+        \item $h(x)$ is odd, has an inflection point at $x=1$, is increasing on $[0,2]$, is decreasing for $[2,\infty)$. 
+    \end{enumerate}
+    
+    \item  For $\displaystyle y(x) = \frac{x^2 - 4}{x^3} $, determine:
+   	\begin{enumerate}
+       \item the domain 
+       \item all asymptotes
+       \item symmetry (even, odd, neither)
+       \item locations of $x$ and $y$ intercepts (if any)
+       \item critical points, intervals where $f$ is increasing/decreasing
+       \item inflection points and intervals of concavity
+       \item local and absolute extrema
+   	\end{enumerate}
+   	Use the information above to sketch $f(x)$. Label your axes.
+
+	\item A rectangular box, open at the top, is to be constructed from a rectangular sheet of cardboard, 50 cm by 80 cm, by cutting out equal squares in the corners and folding up the sides. What size squares should be cut in order for the container to have the maximum volume?
+    
+    
+    \item A wire of length L is cut into two pieces. One piece is bent into a square, and the other piece is bent into a circle.
+(a) Where should the wire be cut in order to minimize the sums of the areas of the square and circle?
+(b) Where should the wire be cut in order to maximize the sums of the areas of the square and circle?
+    
+\end{enumerate}    
